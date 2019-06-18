@@ -22,7 +22,7 @@ def get_char_int_conversion():
 
 #returns a list of all the path weights and the architecture
 def get_weights_and_arch():
-    round_path = "models/"
+    round_path = "../Modelling/models/"
     model_paths = []
     for root, dirs, files in os.walk(round_path):
         #file names in files path
