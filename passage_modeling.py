@@ -1,7 +1,7 @@
 import os
 import numpy as np
 
-from tensorflow.keras.models import model_from_json
+# from tensorflow.keras.models import model_from_json
 import random
 from IPython.display import clear_output
 import time
@@ -50,12 +50,9 @@ def create_passage(model, sentence, char_to_int, int_to_char):
     print('\n')
     #predict the next 500 characters 
     gen_sentence = sentence
-    # print(gen_sentence.split("  ")[-1], end="", flush=True)
-    print(gen_sentence.split("  ")[-1])
-    for i in range(300):
-        i+=1
-#     period_cnt = 0
-#     while period_cnt != 2:
+    print(gen_sentence.split("  ")[-1], end="", flush=True)
+    # print(gen_sentence.split("  ")[-1])
+    for i in range(500):
         #turn single sentence into model format
         x_pred = np.zeros((1, sentence_length, len(char_to_int)))
         #fill tensor with correspoinding values
@@ -75,21 +72,18 @@ def create_passage(model, sentence, char_to_int, int_to_char):
         p = np.random.multinomial(1, pred_prob, 1) 
         #get the probability position
         prob_ind = np.argmax(p)
-#         print(prob_ind)
 
         #turn prediction into a character
         next_c = int_to_char[prob_ind]
-#         if next_c == '.':
-#             period_cnt += 1
         #add character to generated sentence
         gen_sentence += next_c
         #get new sentence by sliding to index of sentence
         sentence = sentence[1:]+next_c
-        print(next_c)
+        print(next_c, end="", flush=True)
 
   
-    # return gen_sentence.split("  ")[-1]
-    return gen_sentence
+    return gen_sentence.split("  ")[-1]
+    # return gen_sentence
 
 
 #gets input from user and modifies it
@@ -120,29 +114,3 @@ def input_sentence():
 
     return sentence
 
-# def main():
-#     #get the char to int conversion and vice versa
-#     char_to_int, int_to_char = get_char_int_conversion()
-#     #get list of all models and the architecture
-#     model_paths, loaded_model_json = get_weights_and_arch()
-
-
-#     #take input sentence from user
-#     sentence = input_sentence()
-#     clear_output()
-    
-#     #load architecture
-#     loaded_model = tf.keras.models.model_from_json(loaded_model_json)
-#     #pick random weights from list
-#     path = random.choice(model_paths)
-#     # load weights into new model
-#     loaded_model.load_weights(path)
-#     print("\n Loaded model from disk: ", path)
-
-#     create_passage(loaded_model, sentence)
-    
-
-
-# main()
-# if __name__ == "__main__":
-#     main()
