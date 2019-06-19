@@ -57,8 +57,12 @@ def create_passage(model, sentence, char_to_int, int_to_char):
         x_pred = np.zeros((1, sentence_length, len(char_to_int)))
         #fill tensor with correspoinding values
         for k, c in enumerate(sentence):
-            x_ind = char_to_int[c]
-            x_pred[0, k, x_ind] = 1
+            #incase there are inputed characters not in corpus
+            try: 
+                x_ind = char_to_int[c]
+                x_pred[0, k, x_ind] = 1
+            except:
+                pass
 
         #predict next character - returns predicted probabilities
         prob_c = model.predict(x_pred, verbose=0)[0]
