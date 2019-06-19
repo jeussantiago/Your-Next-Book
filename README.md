@@ -31,7 +31,7 @@ There are around 74 million characters within the corpus, which means there are 
     - Less sequences leads to less rentention of grammatical syntax. Words which appear less frequently in the corpus such as "calculus" move never be learned by the model. It would know 'c' would come after a certain sequence and 's' would come after a different unique sequence. But never be able to learn to predict 'c','a','l','c','u','l','u','s' given a sequence simply because it has never been trained on it.
 
 ## Modelling
-(The methods considered in the previous section along with the modelling are implemented in "model_training.ipynb" through the "Modelling/" path)
+(The methods considered in the previous section along with the modelling are implemented in "model_training.ipynb" through the "Modelling/" path)<br>
 A few architectures were considered for this problem. Ultimately however, most of the training time was spent on the basic model.
 #### Basic Model Architecture
 - LSTM
@@ -47,5 +47,9 @@ After training the model through 20 million datapoints, the lowest loss the mode
 - Droput: rate=0.2
 - Dense: activation="softmax" <br>
 (loss function for Deeper model) <br>
+After trainign the model through 5 million datapoints, the lowest loss the model experienced was (--------------)
+
+## Further Steps
+1. The books obtained for the project were scattered in terms of genre and release year. As such, focusing on books of one genre in a range of time intervals such as 2015-2018 would help create coherency 
 
 
