@@ -24,7 +24,7 @@ There are around 74 million characters within the corpus, which means there are 
  
 2. Lessen Sequence Length
     - The larger the sequence, the more unique the sequence becomes and the easier it is to know what the next character is.
-    - Lessening the sequence size leads to generalising which would result in the appearnce of more stop words such as "the" or "is."
+    - Lessening the sequence size leads to generalising which would result in the appearance of more stop words such as "the" or "is."
     - "staunch and true friend; and it was with a feeling o" vs. "feeling o"
 
 3. Lessen Amount of Sequences created with each Corpus Batch
