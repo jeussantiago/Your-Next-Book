@@ -50,6 +50,8 @@ After training the model through 20 million datapoints, the lowest loss the mode
 After trainign the model through 5 million datapoints, the lowest loss the model experienced was (--------------)
 
 ## Further Steps
-1. The books obtained for the project were scattered in terms of genre and release year. As such, focusing on books of one genre in a range of time intervals such as 2015-2018 would help create coherency 
+1. The books obtained for the project were scattered in terms of genre and release year. As such, focusing on books of one genre in a range of time intervals such as 2015-2018 would help create coherency in the produced text. As a further step, multiple models would be created which each specializes in a single genre and specified time period.
+2. Simply because of a lack of computational power and time, tuning of the sequences and model architectures were kept to a minimum. As such, if more computational power was obtained, tuning of sequences and model architectures would be explored.
+3. The addition of Bidirectional long short-term memory(BiLSTM) layers to the model architecture to help with grammatical coherency.
 
 
