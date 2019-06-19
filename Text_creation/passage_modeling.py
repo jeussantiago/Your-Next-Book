@@ -41,7 +41,7 @@ def get_weights_and_arch():
     return model_paths, loaded_model_json
 
 
-#creates new sentences
+#creates new sentences - takes in the rnn model, string sentence, and char to int/ int to char dictionaries
 def create_passage(model, sentence, char_to_int, int_to_char):
 
     sentence_length = len(sentence)
@@ -86,7 +86,7 @@ def create_passage(model, sentence, char_to_int, int_to_char):
     # return gen_sentence
 
 
-#gets input from user and modifies it
+#gets input from user and modifies it for model format
 def input_sentence():
     #take input from user
     while True:
