@@ -11,7 +11,7 @@ The final corpus is located in "books_combined.txt" and contains 96 books, total
 This project tackles the problem of creating unique pieces of texts by predicting the next character given a sequence of characters. As this is a sequence problem, it is fitting to use Recurrent Nueral Networks(RNN). Long short-term memory(LSTM), an alternate version of RNNs, was chosen for its method of alleviating the vanishing gradient problem.
 
 There are many ways to create sequences through text. One way is to convert each character in the sequence into a unique integer value e.g. a -> 1, b -> 2. This is the method used to create the sequence, but with an additional one hot encoding variation. <br>
-<img src="images/Screen Shot 2019-06-19 at 11.40.00 AM.png" height=700>
+<img src="images/Screen Shot 2019-06-19 at 11.40.00 AM.png" height=500>
 The above image represents one datapoint/sequence ("gone so soon?"). The columns represent the unique characters within the corpus however, it should be noted that this image is just a visual representation and there are more unique characters within the actual corpus. Each row represents a corresponding character within the sequence. As you can see, unique characters that are present within the sequence are given a 1, representing that it exist. <br>
 
 ## Dealing with Large Data
@@ -37,7 +37,7 @@ A few architectures were considered for this problem. Ultimately however, most o
 - LSTM
 - Droput: rate=0.2
 - Dense: activation="softmax" <br>
-<img src="images/Screen Shot 2019-06-18 at 9.02.09 AM.png" height=500>
+<img src="images/Screen Shot 2019-06-18 at 9.02.09 AM.png" height=350>
 After training the model through 20 million datapoints, the lowest loss the model expereinced was 1.347.
 
 #### Deeper Model Architecture
@@ -46,7 +46,7 @@ After training the model through 20 million datapoints, the lowest loss the mode
 - LSTM
 - Droput: rate=0.2
 - Dense: activation="softmax" <br>
-<img src="images/Screen Shot 2019-06-19 at 3.42.15 PM.png" height=500>
+<img src="images/Screen Shot 2019-06-19 at 3.42.15 PM.png" height=350>
 
 After trainign the model through 5 million datapoints, the lowest loss the model experienced was 1.3020.
 
