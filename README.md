@@ -36,8 +36,8 @@ A few architectures were considered for this problem. Ultimately however, most o
 #### Basic Model Architecture
 - LSTM
 - Droput: rate=0.2
-- Dense: activation="softmax"
-(loss function for basic model)
+- Dense: activation="softmax" <br>
+(loss function for basic model)<br>
 After training the model through 20 million datapoints, the lowest loss the model expereinced was 1.347.
 
 #### Deeper Model Architecture
@@ -45,5 +45,7 @@ After training the model through 20 million datapoints, the lowest loss the mode
 - Droput: rate=0.2
 - LSTM
 - Droput: rate=0.2
-- Dense: activation="softmax"
-(loss function for Deeper model)
+- Dense: activation="softmax" <br>
+(loss function for Deeper model) <br>
+
+
