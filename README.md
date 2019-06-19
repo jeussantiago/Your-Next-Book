@@ -1,4 +1,5 @@
 # Your Next Book
+The purpose of this project is to create a novel that contains aspects of many other great novels out there but is unique in that it doesn't produce text which can be identified by a single, existing novel or passage. A Recurrent Neural Network (RNN) is used to tackle this problem.
 
 ## Dataset
 Many stories were obtained from Project Gutenberg, a free and easily obtainable data source with multiple story formats such as txt and pdf. All of the books in this project were in the format of txt. All of the stories were chosen because they were listed as being the "Top 100 EBooks last 30 days." As such, if the website is scraped again, the books listed would be different from the books at the time of scraping for this project. (If interested, the scraper is contained in the "get books.ipynb" through the "get_data/" path). All the books were then cleaned to contain only the basic characters that every novel would have such as the alpahbet, numbers, question marks, periods, etc and finally combined into one corpus for easier access. (This process can be found in the "combine books.ipynb" through the "get_data/" path).
