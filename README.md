@@ -29,7 +29,7 @@ There are around 74 million characters within the corpus, which means there are 
 
 3. Lessen Amount of Sequences created with each Corpus Batch
     - The more sequences, the better. It allows the model to learn sentence syntax better simply because of having more training examples.
-    - Less sequences leads to less rentention of grammatical syntax. Words which appear less frequently in the corpus such as "calculus" move never be learned by the model. It would know 'c' would come after a certain sequence and 's' would come after a different unique sequence. But never be able to learn to predict 'c','a','l','c','u','l','u','s' given a sequence simply because it has never been trained on it.
+    - Less sequences leads to less rentention of grammatical syntax. Words which appear less frequently in the corpus such as "calculus" would never be learned by the model. It would know 'c' would come after a certain sequence and 's' would come after a different unique sequence. But never be able to learn to predict 'c','a','l','c','u','l','u','s' given a sequence simply because it has never been trained on it.
 
 ## Modelling
 (The methods considered in the previous section along with the modelling are implemented in "model_training.ipynb" through the "Modelling/" path)<br>
