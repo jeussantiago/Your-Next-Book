@@ -11,7 +11,7 @@ The final corpus is located in "books_combined.txt" and contains 96 books, total
 This project tackles the problem of creating unique pieces of texts by predicting the next character given a sequence of characters. As this is a sequence problem, it is fitting to use Recurrent Nueral Networks(RNN). Long short-term memory(LSTM), an alternate version of RNNs, was chosen for its method of alleviating the vanishing gradient problem.
 
 There are many ways to create sequences through text. One way is to convert each character in the sequence into a unique integer value e.g. a -> 1, b -> 2. This is the method used to create the sequence, but with an additional one hot encoding variation. <br>
-("Gone so Soon?" Table)
+("Gone so Soon?" Table)<br>
 The above image represents one datapoint/sequence ("gone so soon?"). The columns represent the unique characters within the corpus however, it should be noted that this image is just a visual representation and there are more unique characters within the actual corpus. Each row represents a corresponding character within the sequence. As you can see, unique characters that are present within the sequence are given a 1, representing that it exist. <br>
 
 ## Dealing with Large Data
@@ -30,4 +30,20 @@ There are around 74 million characters within the corpus, which means there are 
     - The more sequences, the better. It allows the model to learn sentence syntax better simply because of having more training examples.
     - Less sequences leads to less rentention of grammatical syntax. Words which appear less frequently in the corpus such as "calculus" move never be learned by the model. It would know 'c' would come after a certain sequence and 's' would come after a different unique sequence. But never be able to learn to predict 'c','a','l','c','u','l','u','s' given a sequence simply because it has never been trained on it.
 
+## Modelling
+(The methods considered in the previous section along with the modelling are implemented in "model_training.ipynb" through the "Modelling/" path)
+A few architectures were considered for this problem. Ultimately however, most of the training time was spent on the basic model.
+#### Basic Model Architecture
+- LSTM
+- Droput: rate=0.2
+- Dense: activation="softmax"
+(loss function for basic model)
+After training the model through 20 million datapoints, the lowest loss the model expereinced was 1.347.
 
+#### Deeper Model Architecture
+- LSTM
+- Droput: rate=0.2
+- LSTM
+- Droput: rate=0.2
+- Dense: activation="softmax"
+(loss function for Deeper model)
