@@ -36,16 +36,16 @@ There are around 74 million characters within the corpus, which means there are 
 A few architectures were considered for this problem. Ultimately however, most of the training time was spent on the basic model.
 #### Basic Model Architecture
 - LSTM
-- Droput: rate=0.2
+- Dropout: rate=0.2
 - Dense: activation="softmax" <br>
 <img src="images/Screen Shot 2019-06-18 at 9.02.09 AM.png" height=350>
 After training the model through 20 million datapoints, the lowest loss the model expereinced was 1.347.
 
 #### Deeper Model Architecture
 - LSTM
-- Droput: rate=0.2
+- Dropout: rate=0.2
 - LSTM
-- Droput: rate=0.2
+- Dropout: rate=0.2
 - Dense: activation="softmax" <br>
 <img src="images/Screen Shot 2019-06-19 at 3.42.15 PM.png" height=350>
 
