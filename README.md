@@ -52,7 +52,7 @@ After training the model through 20 million datapoints, the lowest loss the mode
 After trainign the model through 5 million datapoints, the lowest loss the model experienced was 1.3020.
 
 ## Simulation
-<img src="ezgif.com-video-to-gif.gif" height=350>
+![](images/ezgif.com-video-to-gif.gif)
 
 ## Further Steps
 1. The books obtained for the project were scattered in terms of genre and release year. As such, focusing on books of one genre in a range of time intervals such as 2015-2018 would help create coherency in the produced text. As a further step, multiple models would be created which each specializes in a single genre and specified time period.
